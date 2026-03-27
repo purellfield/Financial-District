@@ -498,6 +498,8 @@
     content: '';
     position: absolute; inset: 0;
     background: radial-gradient(ellipse at center, rgba(29,158,117,.15) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
   }
   .cta-section h2 { color: var(--white); position: relative; z-index: 1; margin-bottom: 1rem; }
   .cta-section p { color: rgba(255,255,255,.55); font-size: 1.05rem; font-weight: 300; margin-bottom: 2.5rem; position: relative; z-index: 1; }
@@ -732,7 +734,7 @@
 <section class="cta-section" id="notify">
   <h2>Ready to enroll?</h2>
   <p>Find an upcoming session or sign up for updates and early access.</p>
-  <a href="https://fidi.as.me" target="_blank" class="btn-teal" style="display:inline-block;text-decoration:none;">Find an Upcoming Session →</a>
+  <a href="https://fidi.as.me" target="_blank" class="btn-teal" style="display:inline-block;text-decoration:none;position:relative;z-index:10;">Find an Upcoming Session →</a>
   <div style="margin-top:1.5rem;">
     <p style="font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:.75rem;position:relative;z-index:1;">Not ready for a session? Sign up for updates:</p>
     <form action="https://app.kit.com/forms/9204155/subscriptions" method="post" class="cta-form">
