@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F3 Conejo — Free Workouts for Men</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --near-black: #111111;
+    --dark: #1a1a1a;
+    --gold: #C9A84C;
+    --gold-light: #E2C06B;
+    --gold-dim: #8a6e2e;
+    --white: #f5f5f0;
+    --off-white: #e0ddd6;
+    --muted: #888880;
+    --border: rgba(201,168,76,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 8px 20px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 48px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 12vw, 160px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    max-width: 900px;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--off-white);
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .hero-sub strong { color: var(--gold); font-weight: 600; }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 14px 36px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: var(--white);
+    padding: 14px 36px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(245,245,240,0.3);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .hero-scroll::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold-dim);
+  }
+
+  /* MARQUEE */
+  .marquee-strip {
+    background: var(--gold);
+    overflow: hidden;
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .marquee-inner {
+    display: flex;
+    gap: 0;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+
+  .marquee-inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    color: var(--black);
+    padding: 0 32px;
+  }
+
+  .marquee-dot {
+    color: var(--black);
+    opacity: 0.4;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 100px 48px;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 72px);
+    letter-spacing: 0.03em;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .section-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  /* ABOUT / MISSION */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1200px;
+  }
+
+  .mission-body {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.8;
+  }
+
+  .mission-body p + p { margin-top: 20px; }
+
+  .mission-quote {
+    border-left: 3px solid var(--gold);
+    padding-left: 28px;
+    margin-top: 40px;
+  }
+
+  .mission-quote blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--gold-light);
+  }
+
+  .mission-quote cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-style: normal;
+  }
+
+  /* PRINCIPLES */
+  .principles {
+    background: var(--near-black);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .principles-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .principle-card {
+    background: var(--dark);
+    padding: 40px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s;
+  }
+
+  .principle-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .principle-card:hover { background: #1f1f1f; }
+  .principle-card:hover::after { transform: scaleX(1); }
+
+  .principle-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .principle-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .principle-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+  }
+
+  .testimonial-card {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    padding: 36px;
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'DM Serif Display', serif;
+    font-size: 80px;
+    line-height: 0.8;
+    color: var(--gold);
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.75;
+  }
+
+  /* LOCATIONS PAGE */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  .locations-hero {
+    padding: 140px 48px 60px;
+    background: var(--near-black);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ao-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .day-block {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+  }
+
+  .day-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .day-label h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+  }
+
+  .day-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .ao-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .ao-card {
+    background: var(--near-black);
+    padding: 32px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ao-card:hover {
+    background: var(--dark);
+    border-left-color: var(--gold);
+  }
+
+  .ao-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .ao-time {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+  }
+
+  .ao-location {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .ao-location strong {
+    display: block;
+    color: var(--off-white);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  /* NEW TO F3 PAGE */
+  .welcome-hero {
+    padding: 140px 48px 60px;
+    background: var(--near-black);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+  }
+
+  .tip-card {
+    background: var(--near-black);
+    padding: 40px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .tip-card:hover { border-bottom-color: var(--gold); }
+
+  .tip-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: rgba(201,168,76,0.2);
+    margin-bottom: 16px;
+  }
+
+  .tip-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .tip-body {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--off-white);
+    line-height: 1.75;
+  }
+
+  .excuses-section {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 48px;
+  }
+
+  .excuse-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .excuse-item {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .excuse-item:last-child { border-bottom: none; }
+
+  .excuse-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--gold);
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  .excuse-q {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .excuse-a {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--near-black);
+    border-top: 1px solid var(--border);
+    padding: 60px 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+  }
+
+  .footer-brand .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .footer-brand .logo span { color: var(--gold); }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .footer-col li:hover { color: var(--white); }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* SCHEDULE FORM */
+  .schedule-section {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+  }
+
+  .schedule-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .schedule-inner .section-title { text-align: center; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .form-group input,
+  .form-group select {
+    background: var(--near-black);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group select option {
+    background: var(--near-black);
+  }
+
+  .form-full { grid-column: 1 / -1; }
+
+  .form-submit {
+    margin-top: 24px;
+    width: 100%;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  /* ACTIVE PAGE STYLES */
+  #home { display: block; }
+  #locations { display: none; }
+  #welcome { display: none; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 60px 20px; }
+    .hero { padding: 100px 20px 60px; }
+    .mission-grid { grid-template-columns: 1fr; gap: 40px; }
+    .principles-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .ao-cards { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr; padding: 40px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .locations-hero, .welcome-hero { padding: 100px 20px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo" onclick="showPage('home')">F3 <span>CONEJO</span></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('welcome')">New to F3</a></li>
+    <li><a href="#" onclick="showPage('locations')">Locations</a></li>
+    <li><a href="https://f3conejo.com/backblasts/" target="_blank">Backblasts</a></li>
+    <li><a href="#schedule" class="nav-cta" onclick="showPage('home'); setTimeout(()=>document.getElementById('schedule').scrollIntoView({behavior:'smooth'}),100)">Show Up</a></li>
+  </ul>
+</nav>
+
+<!-- ===================== HOME PAGE ===================== -->
+<div id="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">F3 Conejo · Conejo Valley · Est. 2023</div>
+    <h1>Free<br>Workouts<br>for <em>Men</em></h1>
+    <p class="hero-sub">
+      Peer-led bootcamp workouts across Thousand Oaks, Westlake Village, Agoura Hills & Moorpark.
+      <strong>No fees. No memberships. Just show up.</strong>
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary" onclick="showPage('locations')">Find a Workout</a>
+      <a href="#" class="btn-ghost" onclick="showPage('welcome')">New to F3?</a>
+    </div>
+    <div class="hero-scroll">Scroll to learn more</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span>Free of Charge</span><span class="marquee-dot">·</span>
+      <span>Open to All Men</span><span class="marquee-dot">·</span>
+      <span>Held Outdoors</span><span class="marquee-dot">·</span>
+      <span>Peer Led</span><span class="marquee-dot">·</span>
+      <span>Circle of Trust</span><span class="marquee-dot">·</span>
+      <span>5:30am</span><span class="marquee-dot">·</span>
+      <span>Leave No Man Behind</span><span class="marquee-dot">·</span>
+      <span>Free of Charge</span><span class="marquee-dot">·</span>
+      <span>Open to All Men</span><span class="marquee-dot">·</span>
+      <span>Held Outdoors</span><span class="marquee-dot">·</span>
+      <span>Peer Led</span><span class="marquee-dot">·</span>
+      <span>Circle of Trust</span><span class="marquee-dot">·</span>
+      <span>5:30am</span><span class="marquee-dot">·</span>
+      <span>Leave No Man Behind</span><span class="marquee-dot">·</span>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section>
+    <div class="mission-grid">
+      <div>
+        <div class="section-eyebrow">Our Mission</div>
+        <h2 class="section-title">Strengthen Men Through Purpose-Driven Fitness</h2>
+        <div class="section-divider"></div>
+        <div class="mission-body">
+          <p>F3 Conejo is part of <strong style="color:var(--gold-light)">F3 Nation</strong> — a growing network of over 5,000 free, peer-led workouts for men across 400+ regions in the U.S.</p>
+          <p>We meet in public spaces across the Conejo Valley for early-morning, bootcamp-style workouts designed for men of all fitness levels. Our mission is to plant, grow, and serve small workout groups for men for the invigoration of male community leadership.</p>
+          <p>Getting in the best shape of your life is just a by-product. The workout draws men in — the relationships, brotherhood, and community keeps them coming back.</p>
+        </div>
+        <div class="mission-quote">
+          <blockquote>Leave no man behind, but leave no man where you found him.</blockquote>
+          <cite>F3 Credo</cite>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow">Why F3 Works</div>
+        <h2 class="section-title">Accelerate Your Life</h2>
+        <div class="section-divider"></div>
+        <div class="mission-body">
+          <p>Isolation destroys a man. F3 gives you the chance to strengthen your body through consistent workouts, forge meaningful friendships, and push yourself to grow.</p>
+          <p>Early morning workouts mean you're investing in yourself before the family wakes up — no guilt, no sacrifice. Just you, the gloom, and a brotherhood of men who refuse to quit.</p>
+          <p>Post-workout coffee is provided free of charge at every location. Show up once. You'll be back.</p>
+        </div>
+        <div style="margin-top:40px; display:flex; gap:32px;">
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--gold);line-height:1;">5,000+</div>
+            <div style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Workouts Nationwide</div>
+          </div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--gold);line-height:1;">400+</div>
+            <div style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Regions in the U.S.</div>
+          </div>
+          <div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--gold);line-height:1;">$0</div>
+            <div style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:4px;">Cost to Join</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="principles">
+    <div class="principles-header">
+      <div class="section-eyebrow">What We Stand For</div>
+      <h2 class="section-title">5 Core Principles</h2>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="principle-num">01</div>
+        <div class="principle-title">Free of Charge</div>
+        <p class="principle-desc">Never pay to work out, ever. F3 is and will always be completely free to all men.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">02</div>
+        <div class="principle-title">Open to All Men</div>
+        <p class="principle-desc">No matter the man or his fitness level, you are welcome here. Modify as needed.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">03</div>
+        <div class="principle-title">Held Outdoors</div>
+        <p class="principle-desc">Rain or shine, hot or cold, we are out there in the gloom. The elements are part of it.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">04</div>
+        <div class="principle-title">Peer Led</div>
+        <p class="principle-desc">Leadership rotates among the men. Everyone has the opportunity to lead — the "Q."</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-num">05</div>
+        <div class="principle-title">Ends with a COT</div>
+        <p class="principle-desc">Each workout closes with a Circle of Trust — a moment for connection beyond the reps.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="section-eyebrow">Brotherhood in Action</div>
+    <h2 class="section-title">What the PAX Say</h2>
+    <div class="section-divider"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">I've been working out with this group for the past 6 months and have never felt better. You will not find a more uplifting, compassionate, and motivating group of guys anywhere else. F3 has changed my life in so many ways, and the fitness is only one small piece.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Without really any specific goal to begin with, I stepped on the scale randomly this week and hit 195, and was really proud of myself. This is all F3 this year for me. Speaks to the power of community and fellowship and consistency over time.</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">An amazing group of gentlemen focused on starting the day right! They never start late and never go over time. If you're looking for a group of local men who enjoy getting to know each other and exercising, come check it out!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE CTA -->
+  <section class="schedule-section" id="schedule">
+    <div class="schedule-inner">
+      <div class="section-eyebrow">Ready to Post?</div>
+      <h2 class="section-title">Let Us Know You're Coming</h2>
+      <div class="section-divider" style="margin: 0 auto 32px;"></div>
+      <p style="font-size:15px;color:var(--muted);margin-bottom:40px;">Drop your name and we'll keep an eye out for you. F3 is always free — no strings attached.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="First Last">
+        </div>
+        <div class="form-group">
+          <label>Phone #</label>
+          <input type="tel" placeholder="(805) 000-0000">
+        </div>
+        <div class="form-group form-full">
+          <label>Choose a Location</label>
+          <select>
+            <option value="">Select a workout...</option>
+            <option>Monday · 5:30am · Inception · Russell Ranch Park, Westlake Village</option>
+            <option>Monday · 5:30am · Highpoint · Target, Moorpark</option>
+            <option>Tuesday · 5:30am · Retail Therapy · The Oaks Mall, Thousand Oaks</option>
+            <option>Wednesday · 5:30am · Tony Hawk's Underground · Westlake YMCA</option>
+            <option>Wednesday · 5:30am · Blockbuster · Camarillo</option>
+            <option>Thursday · 5:30am · Purple Haze · Chumash Park, Agoura Hills</option>
+            <option>Thursday · 5:30am · Valhalla · Spring Meadow Park, Thousand Oaks</option>
+            <option>Friday · 5:30am · The Rabbit Hole · Teen Center, Thousand Oaks</option>
+            <option>Saturday · 5:30am · Collision Course · The Stonehaus, Thousand Oaks</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label>Message (optional)</label>
+          <input type="text" placeholder="Anything we should know?">
+        </div>
+      </div>
+      <button class="form-submit">Schedule My First Workout</button>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+<!-- ===================== LOCATIONS PAGE ===================== -->
+<div id="locations">
+
+  <div class="locations-hero">
+    <div class="section-eyebrow">Areas of Operation</div>
+    <h1 class="section-title">Workout Locations</h1>
+    <p style="font-size:16px;color:var(--muted);max-width:560px;margin-top:12px;">All workouts run Monday–Saturday, 5:30am–6:15am. Just show up — no registration required. Post-workout coffee included.</p>
+    <div style="margin-top:28px;">
+      <a href="https://map.f3nation.com/?lat=34.246840&lon=-118.92047&zoom=10&lng=-118.920470" target="_blank" class="btn-primary">Open Full Map</a>
+    </div>
+  </div>
+
+  <section>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Monday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">Inception</div>
+          <div class="ao-time">Mon · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Russell Ranch Park</strong>
+            30798 Russell Ranch Rd<br>Westlake Village
+          </div>
+        </div>
+        <div class="ao-card">
+          <div class="ao-name">Highpoint</div>
+          <div class="ao-time">Mon · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Target</strong>
+            830 New Los Angeles Ave<br>Moorpark
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Tuesday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">Retail Therapy</div>
+          <div class="ao-time">Tue · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>The Oaks Mall</strong>
+            Lynn Rd & W Hillcrest<br>Thousand Oaks
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Wednesday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">Tony Hawk's Underground</div>
+          <div class="ao-time">Wed · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Westlake YMCA</strong>
+            31107 Thousand Oaks Blvd<br>Westlake Village
+          </div>
+        </div>
+        <div class="ao-card">
+          <div class="ao-name">Blockbuster</div>
+          <div class="ao-time">Wed · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Crocs</strong>
+            620 Ventura Blvd #1302<br>Camarillo
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Thursday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">Purple Haze</div>
+          <div class="ao-time">Thu · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Chumash Park</strong>
+            5550 Medea Valley Dr<br>Agoura Hills
+          </div>
+        </div>
+        <div class="ao-card">
+          <div class="ao-name">Valhalla</div>
+          <div class="ao-time">Thu · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Spring Meadow Park</strong>
+            3283 Spring Meadow Ave<br>Thousand Oaks
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Friday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">The Rabbit Hole</div>
+          <div class="ao-time">Fri · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>Teen Center</strong>
+            1375 Janss Rd<br>Thousand Oaks
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label"><h3>Saturday</h3></div>
+      <div class="ao-cards">
+        <div class="ao-card">
+          <div class="ao-name">Collision Course</div>
+          <div class="ao-time">Sat · 5:30 – 6:15am</div>
+          <div class="ao-location">
+            <strong>The Stonehaus</strong>
+            32039 Agoura Rd<br>Thousand Oaks
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Schedule CTA -->
+  <section class="schedule-section" style="padding-top:60px;padding-bottom:60px;">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div class="section-eyebrow">First Time?</div>
+      <h2 class="section-title">Let Us Know You're Coming</h2>
+      <p style="color:var(--muted);margin:16px 0 32px;font-size:15px;">We'll keep an eye out for you. No commitment, no fee — just show up in the gloom.</p>
+      <a href="#" class="btn-primary" onclick="showPage('home');setTimeout(()=>document.getElementById('schedule').scrollIntoView({behavior:'smooth'}),100)">Schedule a Workout</a>
+    </div>
+  </section>
+
+</div><!-- /locations -->
+
+<!-- ===================== NEW TO F3 PAGE ===================== -->
+<div id="welcome">
+
+  <div class="welcome-hero">
+    <div class="section-eyebrow">Welcome, Friendly New Guy (FNG)</div>
+    <h1 class="section-title">New to F3?</h1>
+    <p style="font-size:17px;color:var(--off-white);max-width:600px;margin-top:16px;line-height:1.8;font-weight:300;">
+      You've made it past your excuses. That's the first step to becoming the best version of yourself as a man.
+      F3 does not require membership and is open to ALL men of ALL physical abilities.
+    </p>
+  </div>
+
+  <section>
+    <div class="section-eyebrow">The Truth</div>
+    <h2 class="section-title">Men Need Brotherhood</h2>
+    <div class="section-divider"></div>
+    <p style="font-size:17px;font-weight:300;color:var(--off-white);max-width:700px;line-height:1.8;margin-bottom:60px;">
+      There is one undeniable truth: men need authentic relationships with other men who are working to be strong fathers, husbands, and leaders. <strong style="color:var(--gold-light)">Isolation will destroy a man.</strong> We have the opportunity to change our community and the trajectory of our families. The workout is the magnet. The brotherhood keeps you coming back.
+    </p>
+
+    <div class="section-eyebrow">Tips for Your First Workout</div>
+    <h2 class="section-title">What to Expect</h2>
+    <div class="section-divider"></div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">01</div>
+        <div class="tip-title">Modify as Needed</div>
+        <p class="tip-body">If you haven't exercised in a while, slow down. Don't hurt yourself or get discouraged. Just show up, work hard, and give it your best. We are not competing against one another — we are proud of you for showing up at 5:30am.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">02</div>
+        <div class="tip-title">Pick a Location</div>
+        <p class="tip-body">Visit our Locations page to find the AO (Area of Operation) that works best for you. Nine workouts across the Conejo Valley, Monday through Saturday.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">03</div>
+        <div class="tip-title">Know the Lexicon</div>
+        <p class="tip-body">F3 has a language all its own. The PAX (participants), the Q (leader), the beatdown (workout), the COT (Circle of Trust). Check the Lexicon at f3nation.com so you're not lost in the gloom.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">04</div>
+        <div class="tip-title">Just Introduce Yourself</div>
+        <p class="tip-body">If you're not meeting a friend at your first workout, simply show up and introduce yourself as an FNG (Friendly New Guy). You will be welcomed. All you need is an open mind, a positive attitude, and outdoor workout clothes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXCUSES -->
+  <div class="excuses-section">
+    <div class="section-eyebrow" style="text-align:center;">We've Heard Them All</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:48px;">Top 5 Excuses Not to Show Up</h2>
+    <div class="excuse-list">
+      <div class="excuse-item">
+        <div class="excuse-num">01</div>
+        <div>
+          <div class="excuse-q">"I need to get in shape before coming."</div>
+          <p class="excuse-a">This is Excuse No. 1 on the F3 Hall of Fame chart. The only way to get in shape is to jump in with a group of men who will push you, challenge you, and refuse to let you quit. Stop waiting for ready.</p>
+        </div>
+      </div>
+      <div class="excuse-item">
+        <div class="excuse-num">02</div>
+        <div>
+          <div class="excuse-q">"I already belong to a gym."</div>
+          <p class="excuse-a">Gyms are comfortable, predictable, and a little lonely. Out in the gloom, men gather in freezing rain and blazing heat, pushing each other to grow — physically, mentally, emotionally. There's no treadmill setting for camaraderie.</p>
+        </div>
+      </div>
+      <div class="excuse-item">
+        <div class="excuse-num">03</div>
+        <div>
+          <div class="excuse-q">"That's too early to get up."</div>
+          <p class="excuse-a">By getting up before the world wakes up, you invest in yourself while everyone's still sleeping. You're done before the day begins — no guilt, no sacrificed family time. A win for you and your family.</p>
+        </div>
+      </div>
+      <div class="excuse-item">
+        <div class="excuse-num">04</div>
+        <div>
+          <div class="excuse-q">"I'm already working with a personal trainer."</div>
+          <p class="excuse-a">F3 offers more than a workout — it's an experience. Same accountability and push, but with a group of men working to improve themselves. And here's the kicker: it's 100% free.</p>
+        </div>
+      </div>
+      <div class="excuse-item">
+        <div class="excuse-num">05</div>
+        <div>
+          <div class="excuse-q">"This sounds like a cult."</div>
+          <p class="excuse-a">It's not a cult — it's a brotherhood. Men gathering for a common cause: to improve themselves, their communities, and to lead with purpose. It used to be called civic engagement. If that's cultish, we're proudly standing firm.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section style="text-align:center;padding:80px 48px;">
+    <div class="section-eyebrow">No More Excuses</div>
+    <h2 class="section-title">Ready to Post?</h2>
+    <div class="section-divider" style="margin:0 auto 32px;"></div>
+    <p style="color:var(--muted);font-size:16px;margin-bottom:40px;">Find a workout near you and take the first step.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#" class="btn-primary" onclick="showPage('locations')">See All Locations</a>
+      <a href="#" class="btn-ghost" onclick="showPage('home');setTimeout(()=>document.getElementById('schedule').scrollIntoView({behavior:'smooth'}),100)">Schedule My First Workout</a>
+    </div>
+  </section>
+
+</div><!-- /welcome -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="logo">F3 <span>CONEJO</span></div>
+    <p>"Leave no man behind,<br>but leave no man where you found him."</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigate</h4>
+    <ul>
+      <li onclick="showPage('home')">Home</li>
+      <li onclick="showPage('welcome')">New to F3</li>
+      <li onclick="showPage('locations')">Workout Locations</li>
+      <li onclick="showPage('home');setTimeout(()=>document.getElementById('schedule').scrollIntoView({behavior:'smooth'}),100)">Schedule a Workout</li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Resources</h4>
+    <ul>
+      <li><a href="https://f3nation.com/lexicon/" target="_blank" style="color:inherit;text-decoration:none;">Lexicon</a></li>
+      <li><a href="https://f3conejo.com/exicon/" target="_blank" style="color:inherit;text-decoration:none;">Exicon</a></li>
+      <li><a href="https://f3conejo.com/q-guidelines/" target="_blank" style="color:inherit;text-decoration:none;">Q Guidelines</a></li>
+      <li><a href="https://f3conejo.com/backblasts/" target="_blank" style="color:inherit;text-decoration:none;">Backblasts</a></li>
+      <li><a href="https://f3conejo.com/slack/" target="_blank" style="color:inherit;text-decoration:none;">Join Slack</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    © 2024 F3 Conejo · All Rights Reserved · Powered by the PAX · Part of <a href="https://f3nation.com" target="_blank" style="color:var(--gold);text-decoration:none;">F3 Nation</a>
+  </div>
+</footer>
+
+<script>
+  function showPage(id) {
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('locations').style.display = 'none';
+    document.getElementById('welcome').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Duplicate marquee for seamless loop
+  const inner = document.querySelector('.marquee-inner');
+  inner.innerHTML += inner.innerHTML;
+</script>
+
+</body>
+</html>
