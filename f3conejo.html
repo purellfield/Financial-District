@@ -936,7 +936,7 @@
           <input type="text" placeholder="Anything we should know?">
         </div>
       </div>
-      <button class="form-submit">Schedule My First Workout</button>
+      <button class="form-submit" onclick="sendScheduleEmail()">Schedule My First Workout</button>
     </div>
   </section>
 
@@ -1211,6 +1211,20 @@
 </footer>
 
 <script>
+  function sendScheduleEmail() {
+    const name = document.querySelector('input[placeholder="First Last"]').value || '(not provided)';
+    const phone = document.querySelector('input[placeholder="(805) 000-0000"]').value || '(not provided)';
+    const location = document.querySelector('select').value || '(not selected)';
+    const message = document.querySelector('input[placeholder="Anything we should know?"]').value || '';
+
+    const subject = encodeURIComponent('New F3 Conejo Workout Signup');
+    const body = encodeURIComponent(
+      `Hey PAX,\n\nA new guy is planning to post!\n\nName: ${name}\nPhone: ${phone}\nLocation: ${location}${message ? '\nMessage: ' + message : ''}\n\nSee you in the gloom!`
+    );
+
+    window.location.href = `mailto:f3conejopax@gmail.com?subject=${subject}&body=${body}`;
+  }
+
   function showPage(id) {
     document.getElementById('home').style.display = 'none';
     document.getElementById('locations').style.display = 'none';
