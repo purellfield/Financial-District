@@ -910,15 +910,15 @@
       <div class="form-row">
         <div class="form-group">
           <label>Your Name</label>
-          <input type="text" placeholder="First Last">
+          <input id="sched-name" type="text" placeholder="First Last">
         </div>
         <div class="form-group">
           <label>Phone #</label>
-          <input type="tel" placeholder="(805) 000-0000">
+          <input id="sched-phone" type="tel" placeholder="(805) 000-0000">
         </div>
         <div class="form-group form-full">
           <label>Choose a Location</label>
-          <select>
+          <select id="sched-location">
             <option value="">Select a workout...</option>
             <option>Monday · 5:30am · Inception · Russell Ranch Park, Westlake Village</option>
             <option>Monday · 5:30am · Highpoint · Target, Moorpark</option>
@@ -933,7 +933,7 @@
         </div>
         <div class="form-group form-full">
           <label>Message (optional)</label>
-          <input type="text" placeholder="Anything we should know?">
+          <input id="sched-message" type="text" placeholder="Anything we should know?">
         </div>
       </div>
       <button class="form-submit" onclick="sendScheduleEmail()">Schedule My First Workout</button>
@@ -1212,10 +1212,10 @@
 
 <script>
   function sendScheduleEmail() {
-    const name = document.querySelector('input[placeholder="First Last"]').value || '(not provided)';
-    const phone = document.querySelector('input[placeholder="(805) 000-0000"]').value || '(not provided)';
-    const location = document.querySelector('select').value || '(not selected)';
-    const message = document.querySelector('input[placeholder="Anything we should know?"]').value || '';
+    const name = document.getElementById('sched-name').value || '(not provided)';
+    const phone = document.getElementById('sched-phone').value || '(not provided)';
+    const location = document.getElementById('sched-location').value || '(not selected)';
+    const message = document.getElementById('sched-message').value || '';
 
     const subject = encodeURIComponent('New F3 Conejo Workout Signup');
     const body = encodeURIComponent(
