@@ -3,772 +3,446 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Primary SEO -->
-<title>Financial District | Investing & Finance Classes for Kids in Westlake Village</title>
-<meta name="description" content="Financial District is the Mathnasium of investing and finance — in-person financial literacy tutoring for kids ages 8–16 in Westlake Village, CA. Small groups, real curriculum, structured sessions. Sign up for updates today.">
-<meta name="keywords" content="investing classes for kids Westlake Village, financial literacy tutoring kids, money classes children Westlake Village, investing education youth Calabasas, finance tutoring kids Thousand Oaks, financial literacy Agoura Hills, kids investing Oak Park, investment classes Newbury Park, finance classes Camarillo, financial literacy for kids, investment classes children, kids investing program">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.learnatfidi.com/">
-
-<!-- Open Graph (Facebook, LinkedIn, iMessage previews) -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.learnatfidi.com/">
-<meta property="og:title" content="Financial District | The Mathnasium of Investing & Finance for Kids">
-<meta property="og:description" content="In-person investing and finance tutoring for kids ages 8–16 in Westlake Village. Structured curriculum, small groups, real instructors. Now enrolling.">
-<meta property="og:image" content="https://www.learnatfidi.com/og-image.jpg">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Financial District">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Financial District | The Mathnasium of Investing & Finance for Kids">
-<meta name="twitter:description" content="In-person investing and finance tutoring for kids ages 8–16 in Westlake Village. Now enrolling.">
-<meta name="twitter:image" content="https://www.learnatfidi.com/og-image.jpg">
-
-<!-- Local Business Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Financial District — Money & Investing for Kids",
-  "description": "In-person investing and finance tutoring for kids ages 8–16. The Mathnasium of investing and finance — structured curriculum, small groups, real instructors.",
-  "url": "https://www.learnatfidi.com",
-  "logo": "https://www.learnatfidi.com/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Westlake Village",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "34.1414",
-    "longitude": "-118.8198"
-  },
-  "areaServed": ["Agoura Hills", "Oak Park", "Westlake Village", "Thousand Oaks", "Newbury Park", "Camarillo", "Calabasas"],
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Children ages 8–16"
-  },
-  "sameAs": []
-}
-</script>
+<title>Intro to Investing Workshop — Financial District</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --navy: #0D1F3C;
-    --teal: #1D9E75;
-    --teal-light: #5DCAA5;
-    --teal-pale: #E1F5EE;
-    --cream: #FAF8F4;
-    --warm-gray: #F0EDE7;
-    --text: #0D1F3C;
-    --text-muted: #6B7280;
-    --white: #ffffff;
+  :root{
+    --bg: #0a0e13;
+    --panel: #10161d;
+    --panel-2: #141c24;
+    --teal: #2dd9c2;
+    --teal-deep: #0a6e5f;
+    --gold: #c9a24b;
+    --ink: #f4f6f4;
+    --muted: #8b98a2;
+    --line: rgba(244,246,244,0.1);
+    --maxw: 1180px;
   }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
+  h1,h2,h3,.display{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    line-height:0.95;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  .label{
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    color:var(--muted);
+    font-weight:500;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--teal);
+    color:#06231e;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    padding:15px 26px;
+    border-radius:100px;
+    border:none;
+    cursor:pointer;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .btn:hover{ background:#4be6d1; transform:translateY(-1px); }
+  .btn-ghost{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{ border-color:var(--teal); background:transparent; color:var(--teal); }
 
   /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.25rem 3rem;
-    background: rgba(250,248,244,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(13,31,60,0.08);
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,14,19,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
   }
-  .nav-logo img { height: 72px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 2rem; align-items: center; }
-  .nav-links a { font-size: .875rem; font-weight: 400; color: var(--text-muted); text-decoration: none; transition: color .2s; }
-  .nav-links a:hover { color: var(--navy); }
-  .nav-cta {
-    background: var(--navy); color: var(--white);
-    font-size: .875rem; font-weight: 500;
-    padding: .6rem 1.4rem; border-radius: 100px;
-    text-decoration: none;
-    transition: background .2s, transform .1s;
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
   }
-  .nav-cta:hover { background: var(--teal); transform: translateY(-1px); }
+  .logo{
+    font-family:'Archivo',sans-serif;
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:0.01em;
+  }
+  .logo span{ color:var(--teal); }
+  .navlinks{ display:flex; align-items:center; gap:32px; }
+  .navlinks a.link{ font-size:14.5px; color:var(--muted); font-weight:500; }
+  .navlinks a.link:hover{ color:var(--ink); }
+  @media (max-width:720px){ .navlinks .link{ display:none; } }
 
   /* HERO */
-  .hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-    position: relative;
-    overflow: hidden;
+  .hero{
+    padding:96px 0 64px;
+    position:relative;
+  }
+  .kicker-row{
+    display:flex; align-items:center; gap:14px; margin-bottom:28px;
+  }
+  .dot{ width:7px; height:7px; border-radius:50%; background:var(--teal); flex:none; }
+  .hero h1{
+    font-size:clamp(48px, 9.5vw, 122px);
+    color:var(--ink);
+  }
+  .hero h1 .accent{ color:var(--teal); }
+  .hero-sub{
+    max-width:520px;
+    margin-top:28px;
+    font-size:18px;
+    line-height:1.55;
+    color:var(--muted);
+  }
+  .hero-cta-row{
+    display:flex; align-items:center; gap:22px; margin-top:40px; flex-wrap:wrap;
+  }
+  .price-chip{
+    display:flex; flex-direction:column; line-height:1;
+  }
+  .price-chip .num{ font-family:'Archivo',sans-serif; font-weight:800; font-size:28px; }
+  .price-chip .cap{ font-size:12.5px; color:var(--muted); margin-top:5px; }
+
+  .hero-meta{
+    margin-top:72px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-meta div{
+    padding:22px 0;
+    border-right:1px solid var(--line);
+  }
+  .hero-meta div:last-child{ border-right:none; }
+  .hero-meta .val{ font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; }
+  .hero-meta .lab{ font-size:12.5px; color:var(--muted); margin-top:6px; }
+  @media (max-width:640px){
+    .hero-meta{ grid-template-columns:1fr; }
+    .hero-meta div{ border-right:none; border-bottom:1px solid var(--line); }
+    .hero-meta div:last-child{ border-bottom:none; }
   }
 
-  .hero-left {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 5rem;
-    max-width: 740px;
-    position: relative; z-index: 2;
+  /* STATEMENT */
+  .statement{
+    padding:120px 0;
+    border-top:1px solid var(--line);
   }
+  .statement blockquote{
+    font-family:'Archivo',sans-serif;
+    font-weight:700;
+    font-size:clamp(28px, 4.4vw, 50px);
+    line-height:1.15;
+    max-width:900px;
+    margin:0;
+  }
+  .statement .sig{
+    margin-top:32px;
+    display:flex; align-items:center; gap:12px;
+    color:var(--muted);
+    font-size:14px;
+  }
+  .statement .sig .line{ width:36px; height:1px; background:var(--muted); }
 
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: .5rem;
-    background: var(--teal-pale); color: var(--teal);
-    font-size: .8rem; font-weight: 500;
-    padding: .4rem 1rem; border-radius: 100px;
-    margin-bottom: 2rem;
-    width: fit-content;
-    animation: fadeUp .8s ease both;
+  /* SESSIONS - horizontal scroll gallery */
+  .sessions{ padding:0 0 120px; }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:40px; gap:20px; flex-wrap:wrap;
   }
-  .hero-badge::before {
-    content: ''; width: 7px; height: 7px;
-    background: var(--teal); border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: .6; transform: scale(1.3); }
-  }
+  .section-head h2{ font-size:clamp(30px,4vw,44px); }
+  .section-head p{ color:var(--muted); font-size:15px; max-width:340px; margin:0; }
 
-  h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    color: var(--navy);
-    margin-bottom: 1.5rem;
-    animation: fadeUp .8s ease .1s both;
+  .scroller{
+    display:flex; gap:20px; overflow-x:auto; padding:6px 32px 20px;
+    margin:0 -32px;
+    scroll-snap-type:x mandatory;
   }
-  h1 em {
-    font-style: italic;
-    color: var(--teal);
-  }
+  .scroller::-webkit-scrollbar{ height:6px; }
+  .scroller::-webkit-scrollbar-thumb{ background:var(--line); border-radius:10px; }
 
-  .hero-sub {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--text-muted);
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-    animation: fadeUp .8s ease .2s both;
+  .s-card{
+    flex:0 0 320px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:32px 28px;
+    scroll-snap-align:start;
+    display:flex; flex-direction:column;
+    min-height:360px;
   }
+  .s-card .n{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:52px; color:var(--teal-deep);
+    -webkit-text-stroke:1.5px var(--teal);
+    color:transparent;
+  }
+  .s-card .badge{
+    align-self:flex-start;
+    font-size:12px; color:var(--gold);
+    border:1px solid rgba(201,162,75,0.4);
+    padding:5px 12px; border-radius:100px;
+    margin:18px 0 14px;
+  }
+  .s-card h3{ font-size:22px; font-weight:800; margin-bottom:12px; }
+  .s-card p{ color:var(--muted); font-size:14.5px; line-height:1.55; margin:0; flex:1; }
+  .s-card .foot{ margin-top:20px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:16px; }
 
-  .hero-form {
-    display: flex; gap: .75rem;
-    animation: fadeUp .8s ease .3s both;
-    flex-wrap: wrap;
+  /* WHY / INSTRUCTOR SPLIT */
+  .split{
+    display:grid; grid-template-columns:1fr 1fr; gap:64px;
+    padding:0 0 130px;
   }
-  .hero-form input {
-    flex: 1; min-width: 240px;
-    padding: .9rem 1.4rem;
-    border: 1.5px solid rgba(13,31,60,0.15);
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .95rem;
-    background: var(--white);
-    color: var(--navy);
-    outline: none;
-    transition: border-color .2s;
+  @media (max-width:860px){ .split{ grid-template-columns:1fr; gap:48px; } }
+  .split h2{ font-size:clamp(28px,3.6vw,40px); margin-bottom:24px; }
+  .why-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+  .why-list li{
+    padding:20px 0; border-top:1px solid var(--line);
+    display:flex; gap:18px; align-items:flex-start;
   }
-  .hero-form input:focus { border-color: var(--teal); }
-  .hero-form input::placeholder { color: #aaa; }
-  .btn-primary {
-    background: var(--navy); color: var(--white);
-    border: none; cursor: pointer;
-    padding: .9rem 2rem;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .95rem; font-weight: 500;
-    white-space: nowrap;
-    transition: background .2s, transform .1s;
-  }
-  .btn-primary:hover { background: var(--teal); transform: translateY(-2px); }
+  .why-list li:last-child{ border-bottom:1px solid var(--line); }
+  .why-list .ic{ color:var(--teal); font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; padding-top:2px; }
+  .why-list .tx b{ display:block; font-size:15.5px; margin-bottom:3px; }
+  .why-list .tx span{ color:var(--muted); font-size:14px; line-height:1.5; }
 
-  .hero-proof {
-    display: flex; align-items: center; gap: 1.5rem;
-    margin-top: 2rem;
-    font-size: .8rem; color: var(--text-muted);
-    animation: fadeUp .8s ease .4s both;
+  .instructor-card{
+    background:linear-gradient(155deg, var(--panel-2), var(--panel));
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:44px 36px;
   }
-  .hero-proof-avatars { display: flex; }
-  .hero-proof-avatars span {
-    width: 30px; height: 30px; border-radius: 50%;
-    border: 2px solid var(--cream);
-    display: flex; align-items: center; justify-content: center;
-    font-size: .65rem; font-weight: 500;
-    margin-left: -8px;
-    color: var(--white);
-  }
-  .a1 { background: #1D9E75; }
-  .a2 { background: #185FA5; }
-  .a3 { background: #633806; }
-  .a4 { background: #533489; }
+  .instructor-card .role{ color:var(--teal); font-size:13px; font-weight:600; margin-bottom:16px; }
+  .instructor-card h3{ font-size:28px; font-weight:800; margin-bottom:14px; }
+  .instructor-card p{ color:var(--muted); font-size:15px; line-height:1.6; }
+  .cred-row{ display:flex; gap:28px; margin-top:28px; flex-wrap:wrap; }
+  .cred-row div .val{ font-family:'Archivo',sans-serif; font-weight:800; font-size:26px; }
+  .cred-row div .lab{ font-size:12.5px; color:var(--muted); margin-top:4px; }
 
-  /* HERO RIGHT — visual */
-  .hero-right {
-    position: relative;
-    display: flex; align-items: center; justify-content: center;
-    padding: 5rem 4rem 5rem 2rem;
-    animation: fadeUp .8s ease .2s both;
+  /* PRICING CTA */
+  .cta-block{
+    margin:0 32px 120px;
+    max-width:calc(var(--maxw) - 64px);
+    margin-left:auto; margin-right:auto;
+    background:var(--teal);
+    border-radius:28px;
+    padding:72px 56px;
+    color:#06231e;
+    position:relative;
+    overflow:hidden;
   }
+  .cta-block::after{
+    content:"";
+    position:absolute; right:-80px; top:-80px;
+    width:320px; height:320px; border-radius:50%;
+    background:rgba(6,35,30,0.08);
+  }
+  .cta-grid{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap;
+    position:relative; z-index:1;
+  }
+  .cta-block h2{ font-size:clamp(32px,5vw,58px); color:#06231e; max-width:600px; }
+  .cta-price{ text-align:right; }
+  .cta-price .amount{ font-family:'Archivo',sans-serif; font-weight:900; font-size:64px; line-height:1; }
+  .cta-price .per{ font-size:14px; margin-top:6px; }
+  .cta-block .btn-row{ margin-top:36px; display:flex; align-items:center; gap:18px; }
+  .btn-dark{
+    background:#06231e; color:var(--teal);
+    padding:16px 30px; border-radius:100px; font-weight:600; font-size:15px;
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .btn-dark:hover{ background:#0a3a30; }
+  .cta-note{ font-size:13.5px; opacity:0.75; }
 
-  .hero-card-main {
-    background: var(--navy);
-    border-radius: 28px;
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 380px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 40px 80px rgba(13,31,60,.25);
+  footer{
+    border-top:1px solid var(--line);
+    padding:48px 0 40px;
   }
-  .hc-label { font-size: .75rem; color: rgba(255,255,255,.5); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; }
-  .hc-portfolio-label { font-size: .85rem; color: rgba(255,255,255,.7); margin-bottom: .25rem; }
-  .hc-portfolio-value {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.8rem; color: var(--white);
-    letter-spacing: -.03em;
-  }
-  .hc-change {
-    display: inline-flex; align-items: center; gap: .3rem;
-    background: rgba(29,158,117,.2); color: var(--teal-light);
-    font-size: .8rem; font-weight: 500;
-    padding: .25rem .75rem; border-radius: 100px;
-    margin-top: .5rem;
-  }
-  .hc-chart {
-    margin: 1.5rem 0 1rem;
-    height: 80px;
-    position: relative;
-  }
-  .hc-chart svg { width: 100%; height: 100%; }
-
-  .hc-stocks { display: flex; flex-direction: column; gap: .75rem; margin-top: 1rem; }
-  .hc-stock {
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(255,255,255,.07);
-    border-radius: 12px;
-    padding: .7rem 1rem;
-  }
-  .hc-stock-left { display: flex; align-items: center; gap: .75rem; }
-  .hc-stock-icon {
-    width: 32px; height: 32px; border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: .8rem; font-weight: 500; color: var(--white);
-  }
-  .hc-stock-name { font-size: .85rem; font-weight: 500; color: var(--white); }
-  .hc-stock-shares { font-size: .75rem; color: rgba(255,255,255,.45); }
-  .hc-stock-gain { font-size: .85rem; font-weight: 500; color: var(--teal-light); }
-
-  /* floating badges */
-  .hero-float {
-    position: absolute;
-    background: var(--white);
-    border-radius: 16px;
-    padding: .9rem 1.1rem;
-    box-shadow: 0 8px 30px rgba(13,31,60,.12);
-    font-size: .8rem;
-    z-index: 3;
-    animation: float 4s ease-in-out infinite;
-  }
-  .hero-float-1 { top: 15%; left: -30px; animation-delay: 0s; }
-  .hero-float-2 { bottom: 20%; right: -20px; animation-delay: 1.5s; }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .float-icon { font-size: 1.2rem; margin-bottom: .25rem; }
-  .float-label { color: var(--text-muted); line-height: 1.4; }
-  .float-label strong { display: block; color: var(--navy); font-weight: 500; }
-
-  /* BG decoration */
-  .hero-bg-circle {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  .bg-c1 {
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(29,158,117,.08) 0%, transparent 70%);
-    top: -100px; right: -100px;
-  }
-  .bg-c2 {
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(13,31,60,.06) 0%, transparent 70%);
-    bottom: -50px; left: 20%;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* SOCIAL PROOF STRIP */
-  .proof-strip {
-    background: var(--navy);
-    padding: 1.25rem 4rem;
-    display: flex; align-items: center; justify-content: center; gap: 4rem;
-    flex-wrap: wrap;
-  }
-  .proof-item { text-align: center; }
-  .proof-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.8rem; color: var(--teal-light);
-    line-height: 1;
-  }
-  .proof-desc { font-size: .8rem; color: rgba(255,255,255,.55); margin-top: .2rem; }
-
-  /* HOW IT WORKS */
-  .section { padding: 6rem 5rem; }
-  .section-tag {
-    font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
-    color: var(--teal); margin-bottom: 1rem;
-  }
-  h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    line-height: 1.1; letter-spacing: -.025em;
-    color: var(--navy); margin-bottom: 1rem;
-  }
-  .section-sub { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; max-width: 560px; font-weight: 300; }
-
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
-  }
-  .step {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 2rem;
-    position: relative;
-    border: 1px solid rgba(13,31,60,.07);
-    transition: transform .2s, box-shadow .2s;
-  }
-  .step:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(13,31,60,.1); }
-  .step-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3.5rem; color: rgba(13,31,60,.07);
-    line-height: 1;
-    position: absolute; top: 1rem; right: 1.5rem;
-  }
-  .step-icon {
-    width: 48px; height: 48px; border-radius: 14px;
-    background: var(--teal-pale);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; margin-bottom: 1.25rem;
-  }
-  .step h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem; color: var(--navy);
-    margin-bottom: .75rem; letter-spacing: -.02em;
-  }
-  .step p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
-
-  /* CURRICULUM */
-  .curriculum { background: var(--navy); padding: 6rem 5rem; }
-  .curriculum h2 { color: var(--white); }
-  .curriculum .section-tag { color: var(--teal-light); }
-  .curriculum .section-sub { color: rgba(255,255,255,.55); }
-
-  .age-tracks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3.5rem;
-  }
-  .track {
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 20px;
-    padding: 2rem;
-    transition: background .2s;
-  }
-  .track:hover { background: rgba(255,255,255,.1); }
-  .track-age {
-    font-size: .75rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--teal-light); margin-bottom: .5rem;
-  }
-  .track h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.4rem; color: var(--white);
-    margin-bottom: 1rem; letter-spacing: -.02em;
-  }
-  .track-topics { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-  .track-topics li {
-    font-size: .875rem; color: rgba(255,255,255,.6);
-    display: flex; align-items: center; gap: .6rem;
-    font-weight: 300;
-  }
-  .track-topics li::before {
-    content: ''; width: 5px; height: 5px;
-    border-radius: 50%; background: var(--teal);
-    flex-shrink: 0;
-  }
-
-  /* COMPARISON */
-  .comparison { padding: 6rem 5rem; background: var(--warm-gray); }
-  .comp-table {
-    margin-top: 3rem;
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(13,31,60,.08);
-  }
-  .comp-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    padding: 1.1rem 2rem;
-    border-bottom: 1px solid rgba(13,31,60,.06);
-    align-items: center;
-    font-size: .9rem;
-  }
-  .comp-row:last-child { border-bottom: none; }
-  .comp-row.header {
-    background: var(--navy);
-    font-weight: 500; font-size: .8rem;
-    letter-spacing: .04em; text-transform: uppercase;
-    color: rgba(255,255,255,.6);
-    padding: 1rem 2rem;
-  }
-  .comp-row.header .col-them { color: rgba(255,255,255,.4); }
-  .comp-row.header .col-us { color: var(--teal-light); }
-  .comp-feature { color: var(--text-muted); }
-  .col-them { color: var(--text-muted); font-size: .85rem; }
-  .col-us { font-weight: 500; color: var(--navy); }
-  .check { color: var(--teal); font-size: 1.1rem; }
-  .dash { color: #ddd; }
-
-  /* TESTIMONIAL */
-  .testimonials { padding: 6rem 5rem; }
-  .testimonials h2 { margin-bottom: 3rem; }
-  .testi-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .testi {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid rgba(13,31,60,.07);
-    position: relative;
-  }
-  .testi::before {
-    content: '"';
-    font-family: 'DM Serif Display', serif;
-    font-size: 5rem; color: var(--teal-pale);
-    position: absolute; top: .5rem; left: 1.5rem;
-    line-height: 1;
-  }
-  .testi-text {
-    font-size: .95rem; line-height: 1.7;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    padding-top: 2rem;
-    font-weight: 300;
-  }
-  .testi-author { display: flex; align-items: center; gap: .75rem; }
-  .testi-avatar {
-    width: 36px; height: 36px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: .75rem; font-weight: 500; color: var(--white);
-  }
-  .testi-name { font-size: .875rem; font-weight: 500; color: var(--navy); }
-  .testi-role { font-size: .75rem; color: var(--text-muted); }
-
-  /* CTA */
-  .cta-section {
-    padding: 6rem 5rem;
-    background: var(--navy);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at center, rgba(29,158,117,.15) 0%, transparent 70%);
-    z-index: 0;
-    pointer-events: none;
-  }
-  .cta-section h2 { color: var(--white); position: relative; z-index: 1; margin-bottom: 1rem; }
-  .cta-section p { color: rgba(255,255,255,.55); font-size: 1.05rem; font-weight: 300; margin-bottom: 2.5rem; position: relative; z-index: 1; }
-  .cta-form {
-    display: flex; gap: .75rem; justify-content: center;
-    flex-wrap: wrap;
-    position: relative; z-index: 1;
-  }
-  .cta-form input {
-    padding: .9rem 1.5rem;
-    border: 1.5px solid rgba(255,255,255,.2);
-    border-radius: 100px;
-    background: rgba(255,255,255,.1);
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: .95rem;
-    min-width: 280px;
-    outline: none;
-    transition: border-color .2s;
-  }
-  .cta-form input::placeholder { color: rgba(255,255,255,.4); }
-  .cta-form input:focus { border-color: var(--teal-light); }
-  .btn-teal {
-    background: var(--teal); color: var(--white);
-    border: none; cursor: pointer;
-    padding: .9rem 2rem;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .95rem; font-weight: 500;
-    transition: background .2s, transform .1s;
-  }
-  .btn-teal:hover { background: var(--teal-light); color: var(--navy); transform: translateY(-2px); }
-  .cta-note { font-size: .8rem; color: rgba(255,255,255,.35); margin-top: 1rem; position: relative; z-index: 1; }
-
-  /* FOOTER */
-  footer {
-    background: #060f1e;
-    padding: 2rem 5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    font-size: .8rem; color: rgba(255,255,255,.3);
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem; color: rgba(255,255,255,.6);
-  }
-  .footer-logo span { color: var(--teal); }
-
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-right { display: none; }
-    .hero-left { padding: 6rem 2rem 4rem; }
-    .steps, .age-tracks, .testi-grid { grid-template-columns: 1fr; }
-    .section, .curriculum, .comparison, .testimonials, .cta-section { padding: 4rem 2rem; }
-    nav { padding: 1rem 1.5rem; }
-    .nav-links a { display: none; }
-    .proof-strip { gap: 2rem; padding: 1.5rem 2rem; }
+  .foot-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+  .foot-grid .logo{ margin-bottom:10px; }
+  .foot-grid p{ color:var(--muted); font-size:13.5px; margin:0; max-width:280px; line-height:1.6; }
+  .foot-links{ display:flex; gap:28px; flex-wrap:wrap; }
+  .foot-links a{ color:var(--muted); font-size:13.5px; }
+  .foot-links a:hover{ color:var(--teal); }
+  .foot-bottom{
+    margin-top:36px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; color:var(--muted); font-size:12.5px; flex-wrap:wrap; gap:10px;
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><a href="#" style="display:block;line-height:0;"><img src="fidi_logo1.png" alt="Financial District" /></a></div>
-  <div class="nav-links">
-    <a href="#how">How it works</a>
-    <a href="#curriculum">Curriculum</a>
-
-    <a href="https://fidi.as.me" class="nav-cta" target="_blank">Find an Upcoming Session</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-circle bg-c1"></div>
-  <div class="hero-bg-circle bg-c2"></div>
-
-  <div class="hero-left">
-    <div class="hero-badge">Now Enrolling — Westlake Village</div>
-    <h1>The Mathnasium of <em>Investing & Finance</em> — for Kids.</h1>
-    <p class="hero-sub">Financial District is a neighborhood learning center that teaches kids ages 8–16 how money, markets, and investing work. Just like Mathnasium built a proven model for math, we've built the same thing for financial literacy — structured curriculum, small groups, in-person instruction.</p>
-    <a href="https://fidi.as.me" target="_blank" class="btn-primary" style="display:inline-block;text-decoration:none;">Find an Upcoming Session →</a>
-    <div style="margin-top:1.25rem;">
-      <p style="font-size:.8rem;color:#888;margin-bottom:.6rem;font-weight:400;">Not ready for a session? Sign up for updates:</p>
-      <form action="https://app.kit.com/forms/9204155/subscriptions" method="post" class="hero-form">
-        <input type="email" name="email_address" placeholder="Your email address" required />
-        <button type="submit" class="btn-primary" style="white-space:nowrap;">Stay Updated →</button>
-      </form>
+<header>
+  <nav class="wrap">
+    <div class="logo">FI<span>DI</span></div>
+    <div class="navlinks">
+      <a class="link" href="#sessions">Sessions</a>
+      <a class="link" href="#instructor">Instructor</a>
+      <a class="link" href="#enroll">Pricing</a>
+      <a class="btn" href="https://fidi.as.me" target="_blank" rel="noopener">Sign up now</a>
     </div>
+  </nav>
+</header>
 
+<main class="wrap">
 
-</section>
-
-<!-- PROOF STRIP -->
-<div class="proof-strip">
-  <div class="proof-item">
-    <div class="proof-num">8–16</div>
-    <div class="proof-desc">Age range served</div>
-  </div>
-  <div class="proof-item">
-    <div class="proof-num">3</div>
-    <div class="proof-desc">Age-specific tracks</div>
-  </div>
-
-  <div class="proof-item">
-    <div class="proof-num">Free</div>
-    <div class="proof-desc">Placement assessment</div>
-  </div>
-
-</div>
-
-<!-- VIDEO SECTION -->
-<section class="section" id="video" style="background:var(--navy);padding:5rem 2rem;">
-  <div style="max-width:800px;margin:0 auto;text-align:center;">
-    <div class="section-tag" style="background:rgba(29,158,117,0.2);color:#5DCAA5;border-color:rgba(29,158,117,0.3);">Financial District in Action</div>
-    <div style="position:relative;width:100%;max-width:380px;margin:1.5rem auto 0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);">
-      <iframe
-        src="https://www.youtube.com/embed/Gp4Yhuk_lcQ"
-        title="Financial District — First Session"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="width:100%;aspect-ratio:9/16;display:block;">
-      </iframe>
+  <section class="hero">
+    <div class="kicker-row">
+      <span class="dot"></span>
+      <span class="label">intro to investing &middot; adults 25&ndash;30</span>
     </div>
-    <p style="color:rgba(255,255,255,0.3);font-size:0.8rem;margin-top:1.5rem;">Financial District · Westlake Village, CA · learnatfidi.com</p>
-  </div>
-</section>
+    <h1>Learn to<br>invest<span class="accent">.</span><br>For real this time.</h1>
+    <p class="hero-sub">Three sessions. One CFA-led framework. Everything you needed someone to explain years ago, finally explained straight.</p>
 
-<!-- HOW IT WORKS -->
-<section class="section" id="how">
-  <div class="section-tag">How it works</div>
-  <h2>Just like math tutoring,<br>but for Money & Investing.</h2>
-  <p class="section-sub">We've taken the Mathnasium model — structured, in-person, small-group instruction with real curriculum — and built it for financial literacy.</p>
-
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <div class="step-icon">🎯</div>
-      <h3>Placement assessment</h3>
-      <p>We meet your child where they are. A short diagnostic places them in the right track — Foundations, Explorer, or Builder — so sessions are always appropriately challenging.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <div class="step-icon">📚</div>
-      <h3>Structured sessions</h3>
-      <p>55-minute sessions in groups of 4–8. Instructors follow a real curriculum with lesson plans. Concepts build deliberately on each other.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <div class="step-icon">🌱</div>
-      <h3>Lifetime impact</h3>
-      <p>A child who understands compound interest at age 10 thinks differently at age 30. The habits, mindset, and vocabulary of investing — learned early — compound just like money does. Impact that positions your child for a lifetime of success.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CURRICULUM -->
-<section class="curriculum" id="curriculum">
-  <div class="section-tag">Curriculum tracks</div>
-  <h2>Three tracks, built for their age.</h2>
-  <p class="section-sub" style="color:rgba(255,255,255,.5)">Investing means something different at age 9 vs. 15. Our tracks are purpose-built for each developmental stage.</p>
-
-  <div class="age-tracks">
-    <div class="track">
-      <div class="track-age">Ages 8–10 · Foundations</div>
-      <h3>Money Explorers</h3>
-      <ul class="track-topics">
-        <li>What is money and how does it work?</li>
-        <li>Needs vs. wants vs. savings</li>
-        <li>How banks make money</li>
-        <li>Introduction to interest</li>
-        <li>What is a company?</li>
-        <li>How to read a price tag on a stock</li>
-      </ul>
-    </div>
-    <div class="track">
-      <div class="track-age">Ages 11–13 · Builder</div>
-      <h3>Market Builders</h3>
-      <ul class="track-topics">
-        <li>How the stock market works</li>
-        <li>Reading financial news</li>
-
-        <li>Compound interest deep dive</li>
-        <li>Risk vs. return tradeoffs</li>
-        <li>Index funds vs. individual stocks</li>
-      </ul>
-    </div>
-    <div class="track">
-      <div class="track-age">Ages 14–16 · Advanced</div>
-      <h3>Portfolio Architects</h3>
-      <ul class="track-topics">
-        <li>Fundamental analysis</li>
-
-        <li>Intro to ETFs and bonds</li>
-        <li>Intro to private markets</li>
-        <li>Reading earnings reports</li>
-        <li>Economic cycles & Fed policy</li>
-        <li>Personal financial planning</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
-
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="section-tag">From parents</div>
-  <h2>What families are saying.</h2>
-
-  <div class="testi-grid">
-    <div class="testi">
-      <p class="testi-text">My 12-year-old came home explaining P/E ratios to me. I've worked in finance for 15 years. I was floored. This is exactly what school should be teaching.</p>
-      <div class="testi-author">
-        <div class="testi-avatar" style="background:#1D9E75">JL</div>
-        <div>
-          <div class="testi-name">Jamie L.</div>
-          <div class="testi-role">Parent of a Builder track student</div>
-        </div>
+    <div class="hero-cta-row">
+      <a class="btn" href="https://fidi.as.me" target="_blank" rel="noopener">Sign up now</a>
+      <div class="price-chip">
+        <span class="num">$299</span>
+        <span class="cap">full workshop, all 3 sessions</span>
       </div>
     </div>
-    <div class="testi">
-      <p class="testi-text">She used to think investing was "for adults." After 8 weeks she's asking me about our 401k.</p>
-      <div class="testi-author">
-        <div class="testi-avatar" style="background:#185FA5">MR</div>
-        <div>
-          <div class="testi-name">Maya R.</div>
-          <div class="testi-role">Parent of a Foundations student</div>
-        </div>
+
+    <div class="hero-meta">
+      <div>
+        <div class="val">3</div>
+        <div class="lab">sessions</div>
+      </div>
+      <div>
+        <div class="val">55 min</div>
+        <div class="lab">per session</div>
+      </div>
+      <div>
+        <div class="val">Westlake Village</div>
+        <div class="lab">in person, CA</div>
       </div>
     </div>
-    <div class="testi">
-      <p class="testi-text">We pay for math tutoring, piano, soccer. This is the first thing my son has been genuinely excited about in years. He actually asks to go.</p>
-      <div class="testi-author">
-        <div class="testi-avatar" style="background:#533489">AP</div>
-        <div>
-          <div class="testi-name">Arjun P.</div>
-          <div class="testi-role">Parent of a Portfolio Architect</div>
-        </div>
+  </section>
+
+  <section class="statement">
+    <blockquote>It doesn't matter that no one taught you this in school. It matters what you do about it now.</blockquote>
+    <div class="sig"><span class="line"></span> Financial District</div>
+  </section>
+
+  <section class="sessions" id="sessions">
+    <div class="section-head">
+      <h2>Three sessions.<br>One clear path.</h2>
+      <p>Each session builds on the last. Show up for all three and leave with an actual plan, not just vocabulary.</p>
+    </div>
+
+    <div class="scroller">
+      <div class="s-card">
+        <div class="n">01</div>
+        <div class="badge">55 min</div>
+        <h3>Money foundations</h3>
+        <p>How compounding actually works, why time matters more than the amount you start with, and the handful of numbers that drive every investing decision you'll ever make.</p>
+        <div class="foot">Session 1 of 3</div>
+      </div>
+      <div class="s-card">
+        <div class="n">02</div>
+        <div class="badge">55 min</div>
+        <h3>Investing basics</h3>
+        <p>Stocks, bonds, and funds explained without the jargon. What each one actually is, what it's for, and what belongs in a first portfolio.</p>
+        <div class="foot">Session 2 of 3</div>
+      </div>
+      <div class="s-card">
+        <div class="n">03</div>
+        <div class="badge">55 min</div>
+        <h3>Building wealth</h3>
+        <p>Risk, diversification, and turning what you've learned into a simple plan you can actually start using the same week.</p>
+        <div class="foot">Session 3 of 3</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="cta-section" id="notify">
-  <h2>Ready to enroll?</h2>
-  <p>Find an upcoming session or sign up for updates and early access.</p>
-  <a href="https://fidi.as.me" target="_blank" class="btn-teal" style="display:inline-block;text-decoration:none;position:relative;z-index:10;">Find an Upcoming Session →</a>
-  <div style="margin-top:1.5rem;">
-    <p style="font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:.75rem;position:relative;z-index:1;">Not ready for a session? Sign up for updates:</p>
-    <form action="https://app.kit.com/forms/9204155/subscriptions" method="post" class="cta-form">
-      <input type="email" name="email_address" placeholder="Your email address" required />
-      <button type="submit" class="btn-teal">Stay Updated →</button>
-    </form>
-  </div>
-  <div class="cta-note">No spam. Just launch updates and early access. Unsubscribe anytime.</div>
-</section>
+  <section class="split" id="instructor">
+    <div>
+      <h2>Why this actually works</h2>
+      <ul class="why-list">
+        <li>
+          <span class="ic">01</span>
+          <div class="tx"><b>Built by a working investor</b><span>Not a course written by a content team. The material comes directly from someone who allocates capital professionally.</span></div>
+        </li>
+        <li>
+          <span class="ic">02</span>
+          <div class="tx"><b>Small, in-person groups</b><span>Real conversation and real questions answered on the spot, not a video you half-watch.</span></div>
+        </li>
+        <li>
+          <span class="ic">03</span>
+          <div class="tx"><b>Built to be used, not just understood</b><span>You leave session three with a plan for your own money, not just notes.</span></div>
+        </li>
+        <li>
+          <span class="ic">04</span>
+          <div class="tx"><b>No upsell, no jargon</b><span>Three sessions. One price. Nothing else to buy at the end.</span></div>
+        </li>
+      </ul>
+    </div>
 
-<!-- FOOTER -->
+    <div class="instructor-card">
+      <div class="role">your instructor</div>
+      <h3>Jarrod Rapalje, CFA</h3>
+      <p>Managing Director with 18+ years of institutional investment experience, now teaching the version of this material he wishes someone had taught him at 25. He founded Financial District to make real investing education accessible, first for teenagers, and now for the adults who missed it the first time around.</p>
+      <div class="cred-row">
+        <div><div class="val">CFA</div><div class="lab">charterholder</div></div>
+        <div><div class="val">18+ yrs</div><div class="lab">institutional investing</div></div>
+        <div><div class="val">MD</div><div class="lab">at KKR</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-block" id="enroll">
+    <div class="cta-grid">
+      <div>
+        <h2>Three sessions. One price. Start now.</h2>
+        <div class="btn-row">
+          <a class="btn-dark" href="https://fidi.as.me" target="_blank" rel="noopener">Sign up now</a>
+          <span class="cta-note">31416 Agoura Rd, Suite #105, Westlake Village</span>
+        </div>
+      </div>
+      <div class="cta-price">
+        <div class="amount">$299</div>
+        <div class="per">for all 3 sessions</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <footer>
-  <div class="footer-logo">Financial District — Financial Literacy for Youth</div>
-  <div>© 2026 Financial District. Westlake Village, CA · Serving Agoura Hills, Oak Park, Westlake Village, Thousand Oaks, Newbury Park, Camarillo & Calabasas</div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">FI<span style="color:var(--teal)">DI</span></div>
+        <p>Financial District. Investing education taught by people who actually invest for a living.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#sessions">Sessions</a>
+        <a href="#instructor">Instructor</a>
+        <a href="https://fidi.as.me" target="_blank" rel="noopener">Sign up</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Financial District. All rights reserved.</span>
+      <span>31416 Agoura Rd, Suite #105, Westlake Village, CA 91361</span>
+    </div>
+  </div>
 </footer>
-
 
 </body>
 </html>
